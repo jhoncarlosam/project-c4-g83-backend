@@ -33,11 +33,12 @@ var getters = __importStar(require("../controllers/recollectit"));
 var insertit = __importStar(require("../controllers/insertit"));
 var getit = __importStar(require("../controllers/getit"));
 var deleteit = __importStar(require("../controllers/deleteit"));
+var editit = __importStar(require("../controllers/editit"));
 var route = (0, express_1.Router)();
 route.post("/", auth_1["default"], insert_params.deporte, insertit.logic_deporte);
 route.get("/all", auth_1["default"], getters.logic_deporte);
 route.get("/", auth_1["default"], id_param_1["default"], getit.logic_deporte);
-route.put("/", auth_1["default"], insert_params.deporte, insertit.logic_deporte);
+route.put("/", auth_1["default"], insert_params.deporte, id_param_1["default"], editit.logic_deporte);
 route["delete"]("/", auth_1["default"], id_param_1["default"], deleteit.logic_deporte);
 module.exports = route;
 //# sourceMappingURL=deporte.routes.js.map

@@ -33,11 +33,12 @@ var getters = __importStar(require("../controllers/recollectit"));
 var insertit = __importStar(require("../controllers/insertit"));
 var getit = __importStar(require("../controllers/getit"));
 var deleteit = __importStar(require("../controllers/deleteit"));
+var editit = __importStar(require("../controllers/editit"));
 var route = (0, express_1.Router)();
 route.post("/", auth_1["default"], insert_params.equipo, insertit.logic_equipo);
 route.get("/all", auth_1["default"], getters.logic_equipo);
 route.get("/", auth_1["default"], id_param_1["default"], getit.logic_equipo);
-route.put("/", auth_1["default"], insert_params.equipo, insertit.logic_equipo);
+route.put("/", auth_1["default"], insert_params.equipo, id_param_1["default"], editit.logic_equipo);
 route["delete"]("/", auth_1["default"], id_param_1["default"], deleteit.logic_equipo);
 module.exports = route;
 //# sourceMappingURL=equipo.routes.js.map

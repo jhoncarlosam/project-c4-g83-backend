@@ -6,7 +6,7 @@ import Evento from "../models/evento";
 
 const logic_deporte = async (request:Request, response:Response, next:NextFunction) =>{
  
-    const query = await Deporte.find();
+    const query = await Deporte.find().sort({_id:1}) ;
     if(!query) return response.status(404).json("404 not found");
     response.json(query);
  
@@ -16,7 +16,7 @@ const logic_deporte = async (request:Request, response:Response, next:NextFuncti
 
 const logic_equipo = async (request:Request, response:Response, next:NextFunction) =>{
  
-    const query = await Equipo.find();
+    const query = await Equipo.find().sort({_id:1});
     if(!query) return response.status(404).json("404 not found");
     response.json(query);
  
@@ -25,7 +25,7 @@ const logic_equipo = async (request:Request, response:Response, next:NextFunctio
 
 const logic_evento = async (request:Request, response:Response, next:NextFunction) =>{
  
-    const query = await Evento.find();
+    const query = await Evento.find().sort({_id:1});
     if(!query) return response.status(404).json("404 not found");
     response.json(query);
 
