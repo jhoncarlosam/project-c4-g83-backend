@@ -47,7 +47,7 @@ var logic_deporte = function (request, response, next) { return __awaiter(void 0
     var query;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, deporte_1["default"].find()];
+            case 0: return [4 /*yield*/, deporte_1["default"].find().sort({ _id: 1 })];
             case 1:
                 query = _a.sent();
                 if (!query)
@@ -62,7 +62,7 @@ var logic_equipo = function (request, response, next) { return __awaiter(void 0,
     var query;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, equipo_1["default"].find()];
+            case 0: return [4 /*yield*/, equipo_1["default"].find().sort({ _id: 1 })];
             case 1:
                 query = _a.sent();
                 if (!query)
@@ -77,7 +77,7 @@ var logic_evento = function (request, response, next) { return __awaiter(void 0,
     var query;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, evento_1["default"].find()];
+            case 0: return [4 /*yield*/, evento_1["default"].find().sort({ _id: 1 })];
             case 1:
                 query = _a.sent();
                 if (!query)
