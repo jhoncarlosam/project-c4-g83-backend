@@ -1,7 +1,5 @@
 import mongoose, {Schema, model} from "mongoose"
 
-let schema = mongoose.Schema;
-let Equipo = mongoose.model("Equipo");
 
 let EventoScheme:Schema= new Schema({
     nombre: {
@@ -10,8 +8,8 @@ let EventoScheme:Schema= new Schema({
     },
     fecha: String,
     marcador: String,
-    equipo1: {type: schema.Types.ObjectId, ref: "Equipo" },
-    equipo2: {type: schema.Types.ObjectId, ref: "Equipo" },
+    equipo1:  String,
+    equipo2: String,
     tipo_deporte: String
 }); 
 
